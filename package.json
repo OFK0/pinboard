@@ -1,0 +1,20 @@
+{
+  "name": "pinboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Next.js pinboard to try piway with",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

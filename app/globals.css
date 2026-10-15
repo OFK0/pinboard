@@ -1,0 +1,26 @@
+:root { color-scheme: light dark; --fg: #141414; --muted: #6b6b6b; --bg: #f6f5f1; --line: #d9d7d0; --accent: #cd2355; }
+@media (prefers-color-scheme: dark) { :root { --fg: #ececec; --muted: #9a9a9a; --bg: #101012; --line: #2b2b30; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+main { max-width: 64rem; margin: 0 auto; padding: 2.5rem 1rem; }
+h1 { margin: 0; font-size: 2.25rem; letter-spacing: -0.02em; }
+.muted { color: var(--muted); font-size: .875rem; }
+.new { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 2rem 0; }
+.new input[name=text] { flex: 1 1 16rem; font: inherit; padding: .6rem .75rem; border: 1px solid var(--line); background: transparent; color: inherit; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; gap: .35rem; }
+.swatch { width: 1.75rem; height: 1.75rem; cursor: pointer; border: 2px solid transparent; }
+.swatch:has(input:checked) { border-color: var(--fg); }
+.swatch input { position: absolute; opacity: 0; pointer-events: none; }
+button { font: inherit; cursor: pointer; }
+.new button { background: var(--accent); color: #fff; border: 0; padding: .6rem 1.25rem; }
+.board { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: 1rem; }
+.note { position: relative; padding: 1rem 1rem 1.5rem; min-height: 8rem; color: #1b1b1b; box-shadow: 0 1px 2px rgb(0 0 0 / .15); }
+.note:nth-child(3n+1) { transform: rotate(-1deg); } .note:nth-child(3n+2) { transform: rotate(.8deg); }
+.note p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.note form { position: absolute; top: .25rem; right: .4rem; }
+.note button { background: none; border: 0; font-size: 1.25rem; line-height: 1; color: rgb(0 0 0 / .45); }
+.note button:hover { color: rgb(0 0 0 / .8); }
+.yellow { background: #fde68a; } .pink { background: #f9a8d4; } .green { background: #a7f3d0; } .blue { background: #bfdbfe; }
+.empty { margin: 3rem 0; }
+footer { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

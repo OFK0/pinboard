@@ -1,0 +1,16 @@
+# How piway builds and runs this app: https://github.com/OFK0/piway/blob/main/docs/MANIFEST.md
+piway: 1
+name: pinboard
+
+build:
+  dockerfile: Dockerfile
+
+run:
+  port: 3000
+  memory: 256MiB
+  cpus: 1
+  health:
+    path: /api/healthz
+    interval: 2s
+    timeout: 1s
+    start_period: 15s
