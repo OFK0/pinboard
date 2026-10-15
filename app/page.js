@@ -53,7 +53,8 @@ export default function Page() {
       )}
 
       <footer className="muted">
-        Next.js on Node {process.versions.node} · container {os.hostname()} · up {uptime()}
+        Next.js on Node {process.versions.node} · container {os.hostname()} · up {uptime()} · deployed with{' '}
+        <a href="https://github.com/OFK0/piway">piway</a>
       </footer>
     </main>
   )
