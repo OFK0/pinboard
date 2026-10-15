@@ -17,7 +17,9 @@ export default function Page() {
   return (
     <main>
       <header>
-        <h1>Pinboard</h1>
+        <h1>
+          Pinboard <span className="count">{pins.length} {pins.length === 1 ? 'pin' : 'pins'}</span>
+        </h1>
         <p className="muted">A Next.js app on a Raspberry Pi, deployed with piway. Pins are kept in memory: a new deploy clears the board.</p>
       </header>
 
